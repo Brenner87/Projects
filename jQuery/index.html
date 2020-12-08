@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>learning jQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function valid(){
+			var state = $("input[name='sex']:checked").val()
+			alert(state)
+			$('#message').show()
+			if (!state) return $('#message').html("<font style='color:red'>Sex was not checked</font><br>")
+			if (state=='male')
+				$("#img").show()
+			$('#message').hide()
+			
+		}
+		
+	</script>
+</head>
+<body>
+	<p>Choos your sex</p>
+	<form name="form" id="form">
+		<label for="female">Female</label>
+		<input type="radio" id="female" name="sex" value="female"/>
+		<label for="male">Male</label>
+		<input type="radio" id="male" name="sex" value="male"/>
+		<br><br>
+		<span id="message"></span>
+		<input type="button" onclick="return valid()" id="done" value="Done" />		
+	</form>
+	<img src="1.jpg" style="display: none" id="img">
+	<!-- <div id="test" onclick="$('#test').hide()">Test</div>
+	<div class="test">One</div>
+	<div class="test">Two</div>
+	<p class="test">Three</p>
+
+	<img src="1.jpg" alt="1"/>
+	<img src="2.jpg" alt="2" title="2"/>
+	<ul id="menu">
+		<li><a href="#">link1</a></li>
+		<li><a href="#">link2</a></li>
+		<li><a href="#">link3</a></li>
+		<li><a href="#">link4</a></li>
+	</ul> -->
+	<script type="text/javascript">
+		/*var test=$('#test').html()
+		alert(test)*/
+		/*var test=$('div.test')
+		for(var i=0; i<test.length; i++) {
+			test.get(i).style.color="red"
+		}
+		setTimeout("$('p.test').get(0).style.color='green'", 2000)*/
+		/*var test=$("div")
+		alert (test.length)
+		var img=$("img[title]")
+		alert(img.length)*/
+		/*var link=$("#menu li a:first")
+		alert(link.html())
+
+		link=$("#menu li a:eq(2)")
+		alert(link.html())*/
+	</script>
+</body>
+</html>

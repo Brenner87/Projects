@@ -1,0 +1,26 @@
+<quiz>Зоология для первого класса
+    <question id="1">Сколько ног у кота?
+        <option id="1">1</option>
+        <option id="2">2</option>
+        <option id="3">3</option>
+        <option id="4" correct='true'>4</option>
+    </question>
+    <question id="2">Склько ног у паука?
+        <option id="1" correct='true'>4</option>
+        <option id="2" correct='true'>6</option>
+        <option id="3" correct='true'>8</option>
+        <option id="4">3</option>
+    </question>
+    <question id="3">Какого цвета хвост у лисы?
+        <option id="1">Зеленый</option>
+        <option id="2" correct='true'>Рыжий</option>
+        <option id="3">Фиолетовый</option>
+        <option id="4">Голубой</option>
+    </question>
+    <question id="4">Кто главный в муравейнике?
+        <option id="1">Трутень</option>
+        <option id="2" correct='true'>Королева</option>
+        <option id="3">Рабочий</option>
+        <option id="4">Личинка</option>
+    </question>
+</quiz>

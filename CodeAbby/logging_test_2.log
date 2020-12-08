@@ -1,0 +1,9 @@
+INFO:logging_training_2:Created Employee: John Smiht - John.Smiht@email.com
+INFO:logging_training_2:Created Employee: Corey Schafer - Corey.Schafer@email.com
+INFO:logging_training_2:Created Employee: Panas Didko - Panas.Didko@email.com
+INFO:logging_training_2:Created Employee: John Smiht - John.Smiht@email.com
+INFO:logging_training_2:Created Employee: Corey Schafer - Corey.Schafer@email.com
+INFO:logging_training_2:Created Employee: Panas Didko - Panas.Didko@email.com
+INFO:__main__:Created Employee: John Smiht - John.Smiht@email.com
+INFO:__main__:Created Employee: Corey Schafer - Corey.Schafer@email.com
+INFO:__main__:Created Employee: Panas Didko - Panas.Didko@email.com

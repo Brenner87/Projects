@@ -1,0 +1,28 @@
+A map.xml file is an xml document containing a representation if a linked series of rooms,
+each of which may contain an object.
+
+For each room the values of the attributes North, East, South and West
+are the IDs of the room you find by moving in each one of those firections.
+
+For example above room 1 is connected with room 2 with a door on its East wall.
+A goal file is a plain text document containing, on first line, a string room name,
+and the name of a sought object on every following line.
+
+Write a command-line tool which accepts a map.xml file and goal file
+and outputs a route from the starting room that allows you to pick up all the sought objects, in the following format,
+including any unspecified objects that you happen to pick up along the way:
+
+east
+east
+rubber chicken
+south
+pulley (1/2)
+north
+north
+west
+banjo
+north
+stapler (2/2)
+mission accomplished!!!
+
+

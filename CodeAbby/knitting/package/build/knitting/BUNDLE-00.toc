@@ -1,0 +1,3 @@
+([('knitting',
+   '/Users/brenner/python/Projects/CodeAbby/knitting/package/dist/knitting',
+   'EXECUTABLE')],)

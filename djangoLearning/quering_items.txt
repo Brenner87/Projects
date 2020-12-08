@@ -1,0 +1,43 @@
+^C(django_project) MBP-Oleksandr:firstdjango brenner$ ./manage.py shell
+
+>>> from inventory.models import Item
+
+>>> Item.objects.all()
+<QuerySet [<Item: Item object>, <Item: Item object>, <Item: Item object>, <Item: Item object>, <Item: Item object>]>
+
+>>> items=Item.objects.all()
+>>> item=items[0]
+>>> item
+<Item: Item object>
+
+>>> item.title
+'cheburashka'
+
+>>> item.description
+'this is strange animal, unknown for science'
+
+>>> item.amount
+2
+
+>>> item.id
+2
+
+>>> Item.objects.get(id=2)
+<Item: Item object>
+
+>>> Item.objects.get(id=2).title
+'cheburashka'
+>>> Item.objects.filter(amount=0)
+<QuerySet [<Item: Item object>]>
+
+>>> Item.objects.filter(amount=0)[0].title
+'pioneer'
+
+>>> Item.objects.filter(amount=0)
+<QuerySet [<Item: Item object>]>
+
+>>> Item.objects.exclude(amount=0)
+<QuerySet [<Item: Item object>, <Item: Item object>, <Item: Item object>, <Item: Item object>]>
+
+>>> [i.title for i in Item.objects.exclude(amount=0)]
+['cheburashka', 'gena', 'shapokliak', 'blue train']

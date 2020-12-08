@@ -1,0 +1,17 @@
+**/release-candidate.json
+.coverage
+.gitmessage
+.idea
+.venv
+**/temp/**
+**/.project
+.DS_Store
+**/__pycache__
+**/personal_tests.py
+**/*.swp
+htmlcov/**
+venv/**
+dist/**
+build/**
+collect_framework_foxminded_os87.egg-info/**
+**/*.pyc

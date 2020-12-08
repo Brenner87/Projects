@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>learning jQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+	</script>
+	<style>
+	.div_1{
+		background-color: #e07474;
+	}
+	.div_2{
+		background-color: #b7f5a2;
+	}
+	</style>
+</head>
+<body>
+<div id="div">Block</div>
+<script>
+	$("#div").css("font-size", "25px")
+	$("#div").css("color", "red")
+	$("#div").css("background-color", function() {
+		return "blue";
+	})
+	$("#div").css("width", "250px")
+
+	$("#div").css("height", function(){
+		return $(this).width();
+	})
+
+	$("#div").css("height", function(){
+		var height=prompt("Enter height: ")
+		return height+'px';
+	})
+	
+</script>
+</body>
+</html>

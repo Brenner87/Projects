@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+
+    Створити власний тест
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'create_quiz.js' %}" type="text/javascript"></script>
+{% endblock %}
+{% block content %}
+    <div id="quiz">
+        Назва:
+        <input type="text" name="title"><br>
+        <br>
+    </div>
+    <button id="append">Нове питання</button>
+    <br>
+    <button id="submit">Створити</button>
+
+<script type="text/javascript">
+    var quizContainer = document.getElementById('quiz');
+    var appendButton = document.getElementById('append');
+    var submitButton = document.getElementById('submit');
+    createQuiz(quizContainer, appendButton, submitButton)
+</script>
+
+{% endblock %}

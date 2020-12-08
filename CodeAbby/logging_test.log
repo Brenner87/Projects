@@ -1,0 +1,18 @@
+2017-09-25 01:36:26,398:INFO:Add: 10 + 0 = 10
+2017-09-25 01:36:26,398:INFO:Sub: 10 - 0 = 10
+2017-09-25 01:36:26,398:INFO:Mul: 10 * 0 = 0
+2017-09-25 01:36:26,399:ERROR:Tried to divide by zero
+Traceback (most recent call last):
+  File "D:/OneDrive/PythonLearning/CodeAbby/logging_training.py", line 41, in divide
+    result=x/y
+ZeroDivisionError: division by zero
+2017-09-25 01:36:26,399:INFO:Div: 10 / 0 = None
+2017-09-26 20:48:11,440:INFO:Add: 10 + 0 = 10
+2017-09-26 20:48:11,440:INFO:Sub: 10 - 0 = 10
+2017-09-26 20:48:11,441:INFO:Mul: 10 * 0 = 0
+2017-09-26 20:48:11,441:ERROR:Tried to divide by zero
+Traceback (most recent call last):
+  File "/Users/brenner/OneDrive/PythonLearning/CodeAbby/logging_training.py", line 41, in divide
+    result=x/y
+ZeroDivisionError: division by zero
+2017-09-26 20:48:11,441:INFO:Div: 10 / 0 = None

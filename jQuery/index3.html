@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>learning jQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+	</script>
+	<style>
+	.div_1{
+		background-color: #e07474;
+	}
+	.div_2{
+		background-color: #b7f5a2;
+	}
+	</style>
+</head>
+<body>
+	<div id="div">Text</div>
+	<script type="text/javascript">	
+		var div=prompt("1 or 2?")
+		while(div != 1 && div != 2) {
+			alert("Please enter 1 or 2")
+			div=prompt("1 or 2?")
+		}
+
+		$("#div").attr("class", "div_"+div)
+		alert($("#div").get(0).className)
+
+	</script>
+</body>
+</html>

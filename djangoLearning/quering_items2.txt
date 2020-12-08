@@ -1,0 +1,56 @@
+django_project) MBP-Oleksandr:firstblog brenner$ ./manage.py shell
+
+>>> from django.contrib.auth.models import User
+>>> from blog.models import Post
+>>> user=User.objects.get(username='brenner')
+>>> Post.objects.create(title='One more post', slug='one-more-post', body='Post body.', author=user)
+<Post: Post object>
+
+>>> Post.save()  # not needed in current situation
+>>> Post.title="New Title"
+>>> all_posts=Post.objects.all()
+>>> Post.objects.all()
+<QuerySet [<Post: Post object>, <Post: Post object>]>
+
+>>> [i.title for i in Post.objects.all()]
+['Django_demo', 'One more post']
+
+>>> Post.objects.filter(publish__year=2017)
+<QuerySet [<Post: Post object>, <Post: Post object>]>
+
+>>> Post.objects.filter(publish__year=2017, author__username='admin')
+<QuerySet []>
+
+>>> Post.objects.filter(publish__year=2017, author__username='brenner')
+<QuerySet [<Post: Post object>, <Post: Post object>]>
+
+>>> Post.objects.filter(publish__year=2016)
+<QuerySet []>
+
+>>> Post.objects.filter(publish__year=2017).exclude(title__startswith='Why')
+<QuerySet [<Post: Post object>, <Post: Post object>]>
+
+>>> [i.title for i in Post.objects.filter(publish__year=2017).exclude(title__startswith='Why')]
+['Django_demo', 'One more post']
+
+>>> [i.title for i in Post.objects.filter(publish__year=2017).exclude(title__startswith='Dj')]
+['One more post']
+
+>>> Post.objects.order_by('title')
+<QuerySet [<Post: Post object>, <Post: Post object>]>
+
+>>> Post.objects.order_by('-title')
+<QuerySet [<Post: Post object>, <Post: Post object>]>
+
+>>> post=Post.objects.get(id=1)
+>>> post
+<Post: Post object>
+
+>>> post.title
+'Django_demo'
+
+>>> post.delete()
+(1, {'blog.Post': 1})
+
+>>> post.title
+'Django_demo'
